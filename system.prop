@@ -1,8 +1,5 @@
 # System properties for Huawei U8160
 
-# Ensure that /cache is never used for deodexing
-dalvik.vm.dexopt-data-only=1
-
 # Enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
 ro.com.google.locationfeatures=1
@@ -32,13 +29,18 @@ wifi.interface=wlan0
 wifi.supplicant_scan_interval=45
 
 # Performance & graphics properties
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.execution-mode=int:jit
 dalvik.vm.heapsize=32m
-debug.gr.swapinterval=0
-persist.sys.purgeable_assets=1
+debug.sf.hw=1
+ro.config.disable_hw_accel=true
+debug.composition.type=mdp
+debug.performance.tuning=1
+debug.gr.numframebuffers=2
+persist.service.zram=0
+video.accelerate.hw=1
 persist.sys.use_16bpp_alpha=1
-persist.sys.use_dithering=1
-ro.media.dec.jpeg.memcap=20000000
-ro.opengles.version=65537
+persist.sys.use_dithering=0
 ro.sf.lcd_density=120
 ro.vold.umsdirtyratio=20
 
@@ -56,14 +58,17 @@ persist.sys.fm-attn=0
 persist.sys.headset-attn=0
 persist.sys.speaker-attn=6
 
-## Media
+# disable metadata to enable recording
+debug.camcorder.disablemeta=1
+
+#Makes streaming videos stream faster
 media.stagefright.enable-player=true
 media.stagefright.enable-meta=true
 media.stagefright.enable-scan=true
+#fix HQ
+media.stagefright.enable-http=false
+#fix recording
 media.stagefright.enable-record=true
-
-## Camcorder
-debug.camcorder.disablemeta=1
 
 # SD card readahead buffer (U8160Parts)
 persist.sys.read_ahead_kb=0

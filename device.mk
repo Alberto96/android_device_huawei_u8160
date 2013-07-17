@@ -83,6 +83,12 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8160/prebuilt/init.u8160.usb.rc:root/init.u8160.usb.rc \
     device/huawei/u8160/prebuilt/ueventd.u8160.rc:root/ueventd.u8160.rc
 
+# Alberto96 Apps
+PRODUCT_COPY_FILES += \
+    device/huawei/u8160/prebuilt/app/Calculator.apk:system/app/Calculator.apk \
+    device/huawei/u8160/prebuilt/app/QuickPic.apk:system/app/QuickPic.apk \
+    device/huawei/u8160/prebuilt/lib/libqpic106.so:system/lib/libqpic106.so
+
 # Tethering
 PRODUCT_COPY_FILES += \
     device/huawei/u8160/prebuilt/bin/huawei_tether:system/bin/huawei_tether
