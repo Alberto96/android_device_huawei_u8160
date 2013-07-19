@@ -19,9 +19,8 @@ PRODUCT_NAME := huawei_u8160
 PRODUCT_DEVICE := u8160
 PRODUCT_MODEL := Huawei U8160
 
-PRODUCT_AAPT_CONFIG := mdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
-PRODUCT_LOCALES += ldpi
+PRODUCT_AAPT_CONFIG := normal mdpi ldpi
+PRODUCT_AAPT_PREF_CONFIG := ldpi
 
 # Graphics 
 PRODUCT_PACKAGES += \
@@ -86,8 +85,12 @@ PRODUCT_COPY_FILES += \
 # Alberto96 Apps
 PRODUCT_COPY_FILES += \
     device/huawei/u8160/prebuilt/app/Calculator.apk:system/app/Calculator.apk \
+    device/huawei/u8160/prebuilt/app/TotalCommander.apk:system/app/TotalCommander.apk \
     device/huawei/u8160/prebuilt/app/QuickPic.apk:system/app/QuickPic.apk \
-    device/huawei/u8160/prebuilt/lib/libqpic106.so:system/lib/libqpic106.so
+    device/huawei/u8160/prebuilt/lib/libqpic106.so:system/lib/libqpic106.so \
+    device/huawei/u8160/prebuilt/lib/libtcmadmin.so:system/lib/libtcmadmin.so \
+    device/huawei/u8160/prebuilt/lib/libtcnative.so:system/lib/libtcnative.so \
+    device/huawei/u8160/prebuilt/lib/libtcunrar.so:system/lib/libtcunrar.so
 
 # Tethering
 PRODUCT_COPY_FILES += \
@@ -126,7 +129,6 @@ PRODUCT_COPY_FILES += \
 
 # Other
 PRODUCT_COPY_FILES += \
-    device/huawei/u8160/prebuilt/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
     device/huawei/u8160/prebuilt/etc/vold.fstab:system/etc/vold.fstab
 
 # Huawei hardware setup
