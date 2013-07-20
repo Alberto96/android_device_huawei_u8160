@@ -2,8 +2,8 @@
 
 # Enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
-ro.com.google.locationfeatures=1
-ro.com.google.networklocation=1
+ro.com.google.locationfeatures=0
+ro.com.google.networklocation=0
 
 # Extended JNI checks
 # The extended JNI checks will cause the system to run more slowly, but they can spot a variety of nasty bugs 
@@ -17,8 +17,6 @@ mobiledata.interfaces=rmnet0,rmnet1,rmnet2
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libril-qc-1.so
 ro.config_datause_iface=rmnet0
-ro.ril.hsxpa=1
-ro.ril.gprsclass=10
 ro.telephony.default_network=0
 ro.telephony.call_ring.delay=0
 ro.telephony.call_ring.multiple=false
@@ -29,9 +27,8 @@ wifi.interface=wlan0
 wifi.supplicant_scan_interval=45
 
 # Performance & graphics properties
-dalvik.vm.dexopt-data-only=1
 dalvik.vm.execution-mode=int:jit
-dalvik.vm.heapsize=32m
+dalvik.vm.heapsize=48m
 debug.sf.hw=1
 ro.config.disable_hw_accel=true
 debug.composition.type=mdp
@@ -39,10 +36,12 @@ debug.performance.tuning=1
 debug.gr.numframebuffers=2
 persist.service.zram=0
 video.accelerate.hw=1
+windowsmgr.max_events_per_sec=150
 persist.sys.use_16bpp_alpha=1
 persist.sys.use_dithering=0
+persist.sys.purgeable_assets=1
 ro.sf.lcd_density=120
-ro.vold.umsdirtyratio=20
+ro.vold.umsdirtyratio=50
 
 # Touchscreen properties
 view.fading_edge_length=8
@@ -79,4 +78,24 @@ persist.sys.processlimit=2
 # USB/ADB configuration
 persist.service.adb.enable=1
 persist.sys.usb.config=mass_storage,adb
+
+# Testing
+debug.performance.tuning=1
+ro.config.nocheckin=1
+mot.proximity.delay=25
+ro.lge.proximity.delay=25
+ro.ril.hep=0
+ro.ril.hsxpa=2
+ro.ril.gprsclass=12
+ro.ril.hep=1
+ro.ril.enable.dtm=1
+ro.ril.hsdpa.category=8
+ro.ril.enable.a53=1
+ro.ril.enable.3g.prefix=1
+ro.ril.htcmaskw1.bitmask=4294967295
+ro.ril.htcmaskw1=14449
+ro.ril.hsupa.category=6
+ro.media.enc.jpeg.quality=100
+persist.adb.notify=0
+dalvik.vm.dexopt-flags=v=a,o=v,u=y,m=y
 
