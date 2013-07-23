@@ -48,12 +48,9 @@ PRODUCT_PACKAGES += \
 # Other
 PRODUCT_PACKAGES += \
     camera.u8160 \
-    CMFileManager \
-    Gallery \
     gps.u8160 \
     huawei_brcm_patchram_plus \
     lights.u8160 \
-    Music \
     U8160Parts
 
 # Hardware permissions
@@ -87,10 +84,24 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8160/prebuilt/app/Calculator.apk:system/app/Calculator.apk \
     device/huawei/u8160/prebuilt/app/TotalCommander.apk:system/app/TotalCommander.apk \
     device/huawei/u8160/prebuilt/app/QuickPic.apk:system/app/QuickPic.apk \
+    device/huawei/u8160/prebuilt/app/FMRadio.apk:system/app/FMRadio.apk \
+    device/huawei/u8160/prebuilt/app/Browser.apk:system/app/Browser.apk \
+    device/huawei/u8160/prebuilt/app/GooUpdater.apk:system/app/GooUpdater.apk \
+    device/huawei/u8160/prebuilt/app/Camcorder.apk:system/app/Camcorder.apk \
+    device/huawei/u8160/prebuilt/lib/libandroid-illusion.so:system/lib/libandroid-illusion.so \
+    device/huawei/u8160/prebuilt/lib/libmiker_fm.so:system/lib/libmiker_fm.so \
     device/huawei/u8160/prebuilt/lib/libqpic106.so:system/lib/libqpic106.so \
     device/huawei/u8160/prebuilt/lib/libtcmadmin.so:system/lib/libtcmadmin.so \
     device/huawei/u8160/prebuilt/lib/libtcnative.so:system/lib/libtcnative.so \
     device/huawei/u8160/prebuilt/lib/libtcunrar.so:system/lib/libtcunrar.so
+
+# Alberto96 Kernel
+PRODUCT_COPY_FILES += \
+    device/huawei/u8160/prebuilt/lib/modules/dhd.ko:system/lib/modules/dhd.ko \
+    device/huawei/u8160/prebuilt/lib/modules/joydev.ko:system/lib/modules/joydev.ko \
+    device/huawei/u8160/prebuilt/lib/modules/zram.ko:system/lib/modules/zram.ko \
+    device/huawei/u8160/prebuilt/lib/modules/ehci-hcd.ko:system/lib/modules/ehci-hcd.ko
+
 
 # Tethering
 PRODUCT_COPY_FILES += \

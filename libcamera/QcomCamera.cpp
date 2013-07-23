@@ -372,13 +372,13 @@ camera_memory_t * CameraHAL_GenClientData(const sp<IMemory> &dataPtr,
 void CameraHAL_FixupParams(CameraParameters &settings)
 {
    const char *preview_sizes =
-      "1280x720,800x480,768x432,720x480,640x480,576x432,480x320,384x288,352x288,320x240,240x160,176x144";
+      "640x480,576x432,480x320,384x288,352x288,320x240,240x160,176x144";
    const char *video_sizes =
-      "1280x720,800x480,720x480,640x480,352x288,320x240,176x144";
-   const char *preferred_size       = "640x480";
-   const char *preview_frame_rates  = "30,27,24,15";
+      "640x480,352x288,320x240,176x144";
+   const char *preferred_size       = "320x240";
+   const char *preview_frame_rates  = "10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30";
    const char *preferred_frame_rate = "15";
-   const char *frame_rate_range     = "(15,30)";
+   const char *frame_rate_range     = "(10,25)";
 
    settings.set(CameraParameters::KEY_VIDEO_FRAME_FORMAT,
                 CameraParameters::PIXEL_FORMAT_YUV420SP);

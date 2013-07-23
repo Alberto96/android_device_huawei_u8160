@@ -29,5 +29,5 @@ LOCAL_SRC_FILES := 	\
 	mapper.cpp
 	
 LOCAL_MODULE := gralloc.$(TARGET_BOOTLOADER_BOARD_NAME)
-LOCAL_CFLAGS:= -DLOG_TAG=\"gralloc\" -O3
+LOCAL_CFLAGS:= -DLOG_TAG=\"gralloc\"
 include $(BUILD_SHARED_LIBRARY)
