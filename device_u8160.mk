@@ -42,9 +42,7 @@ PRODUCT_PACKAGES += \
 # Live wallpaper packages
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
-    librs_jni \
-    LiveWallpapers \
-    VisualizationWallpapers
+    librs_jni
 
 # Publish that we support the live wallpaper feature.
 PRODUCT_COPY_FILES += \
@@ -139,13 +137,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=24m \
     persist.sys.purgeable_assets=1 \
     persist.sys.rotationanimation=0 \
-    persist.sys.scrollingcache=2 \
+    persist.sys.scrollingcache=3 \
     persist.sys.use_16bpp_alpha=1 \
-    persist.sys.use_dithering=1 \
+    persist.sys.use_dithering=0 \
     ro.media.dec.jpeg.memcap=20000000 \
-    ro.opengles.version=65537 \
+    ro.opengles.version=65536 \
     ro.sf.lcd_density=120 \
-    ro.vold.umsdirtyratio=20
+    ro.vold.umsdirtyratio=50
 
 # Touchscreen properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -185,9 +183,6 @@ $(call inherit-product, build/target/product/full_base.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_ww_supl.mk)
-
-# LDPI assets
-PRODUCT_LOCALES += ldpi mdpi
 
 PRODUCT_NAME := huawei_u8160
 PRODUCT_DEVICE := u8160
