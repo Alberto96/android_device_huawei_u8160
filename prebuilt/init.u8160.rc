@@ -7,9 +7,6 @@ on boot
 
     import /system/etc/init.u8160parts.rc
 
-    setprop persist.sys.gmaps_hack 1
-    setprop ro.squadzone.build 1
-
     setprop ro.bt.bdaddr_path /data/misc/bluetooth/bdaddr
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
