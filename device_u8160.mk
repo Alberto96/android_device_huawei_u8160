@@ -42,9 +42,7 @@ PRODUCT_PACKAGES += \
 # Live wallpaper packages
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
-    librs_jni \
-    LiveWallpapers \
-    VisualizationWallpapers
+    librs_jni
 
 # Publish that we support the live wallpaper feature.
 PRODUCT_COPY_FILES += \
@@ -100,7 +98,6 @@ PRODUCT_COPY_FILES += \
 # Other
 PRODUCT_COPY_FILES += \
     device/huawei/u8160/prebuilt/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
-    device/huawei/u8160/prebuilt/etc/sysctl.conf:system/etc/sysctl.conf \
     device/huawei/u8160/prebuilt/etc/vold.fstab:system/etc/vold.fstab
 
 # U8160Parts
@@ -136,14 +133,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Performance & graphics properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=24m \
+    dalvik.vm.heapsize=32m \
     persist.sys.purgeable_assets=1 \
     persist.sys.rotationanimation=0 \
-    persist.sys.scrollingcache=2 \
+    persist.sys.scrollingcache=1 \
     persist.sys.use_16bpp_alpha=1 \
-    persist.sys.use_dithering=1 \
+    persist.sys.use_dithering=0 \
     ro.media.dec.jpeg.memcap=20000000 \
-    ro.opengles.version=65537 \
+    ro.opengles.version=65536 \
     ro.sf.lcd_density=120 \
     ro.vold.umsdirtyratio=20
 
